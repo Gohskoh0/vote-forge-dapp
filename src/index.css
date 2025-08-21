@@ -2,113 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-/* VoteForge DAO Design System - Professional governance interface */
+/* VoteForge DAO Design System - Natural, Professional Interface */
 @layer base {
   :root {
-    /* Core Colors - HSL only */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Natural Color Palette - Inspired by real fintech apps */
+    --background: 251 251 253;
+    --foreground: 15 23 42;
 
-    --card: 240 10% 5.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
 
-    --popover: 240 10% 5.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
 
-    /* DAO Primary - Deep Governance Blue */
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 217 91% 70%;
+    /* Professional Blue - Trust & Stability */
+    --primary: 59 130 246;
+    --primary-foreground: 255 255 255;
+    --primary-light: 147 197 253;
 
-    /* DAO Secondary - Sophisticated Purple */  
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 0 0% 98%;
+    /* Sophisticated Navy - Authority */
+    --secondary: 30 41 59;
+    --secondary-foreground: 255 255 255;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
 
-    --accent: 142 71% 45%;
-    --accent-foreground: 0 0% 98%;
+    /* Success Green - Natural & Trustworthy */
+    --accent: 34 197 94;
+    --accent-foreground: 255 255 255;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
 
-    --border: 240 5% 15%;
-    --input: 240 5% 15%;
-    --ring: 217 91% 60%;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 59 130 246;
 
-    /* DAO Success States */
-    --success: 142 71% 45%;
-    --success-foreground: 0 0% 98%;
+    /* Success & Warning - Natural tones */
+    --success: 34 197 94;
+    --success-foreground: 255 255 255;
 
-    /* DAO Warning States */
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 98%;
+    --warning: 245 158 11;
+    --warning-foreground: 255 255 255;
 
-    /* Gradients - Professional DAO Theme */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(240 10% 5.9% / 0.8) 0%, hsl(240 5% 15% / 0.6) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.1) 0%, hsl(262 83% 58% / 0.1) 100%);
+    /* Subtle Natural Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(59 130 246) 0%, hsl(99 102 241) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(255 255 255 / 0.8) 0%, hsl(248 250 252 / 0.6) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(59 130 246 / 0.05) 0%, hsl(99 102 241 / 0.05) 100%);
     
-    /* Shadows - Governance Depth */
-    --shadow-dao: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
-    --shadow-proposal: 0 4px 20px -4px hsl(240 10% 3.9% / 0.5);
-    --shadow-glow: 0 0 40px hsl(217 91% 70% / 0.4);
+    /* Professional Shadows */
+    --shadow-natural: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-card: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-glow: 0 0 20px hsl(59 130 246 / 0.3);
 
-    /* Animations */
-    --transition-dao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-vote: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Smooth Natural Animations */
+    --transition-natural: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --radius: 0.75rem;
-
-    /* Sidebar */
-    --sidebar-background: 240 10% 3.9%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 5% 15%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 240 5% 15%;
-    --sidebar-ring: 217 91% 60%;
+    --radius: 0.5rem;
   }
 
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+  .dark {
+    --background: 2 6 23;
+    --foreground: 248 250 252;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 15 23 42;
+    --card-foreground: 248 250 252;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 15 23 42;
+    --popover-foreground: 248 250 252;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 99 102 241;
+    --primary-foreground: 255 255 255;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 30 41 59;
+    --secondary-foreground: 248 250 252;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 45%;
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
 
-    --accent: 142 71% 45%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 34 197 94;
+    --accent-foreground: 255 255 255;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 217 91% 60%;
+    --border: 30 41 59;
+    --input: 30 41 59;
+    --ring: 99 102 241;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 240 5.9% 90%;
-    --sidebar-ring: 217 91% 60%;
+    --success: 34 197 94;
+    --success-foreground: 255 255 255;
+
+    --warning: 245 158 11;
+    --warning-foreground: 255 255 255;
   }
 }
 
@@ -121,19 +108,21 @@
     @apply bg-background text-foreground;
     background-image: var(--gradient-hero);
     background-attachment: fixed;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* DAO Custom Classes */
+  /* Natural DAO Card Styles */
   .dao-card {
-    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl;
+    @apply bg-card/80 backdrop-blur-sm border border-border rounded-xl;
     background-image: var(--gradient-card);
-    transition: var(--transition-dao);
+    box-shadow: var(--shadow-natural);
+    transition: var(--transition-natural);
   }
 
   .dao-card:hover {
-    @apply border-primary/30;
-    box-shadow: var(--shadow-proposal);
-    transform: translateY(-2px);
+    @apply border-primary/20;
+    box-shadow: var(--shadow-card);
+    transform: translateY(-1px);
   }
 
   .dao-glow {
@@ -148,7 +137,26 @@
   }
 
   .vote-progress {
-    transition: var(--transition-vote);
+    transition: var(--transition-smooth);
     background: var(--gradient-primary);
+  }
+
+  /* Loading Animation */
+  .loading-dot {
+    animation: loading-pulse 1.4s ease-in-out infinite both;
+  }
+
+  .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+  .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+  @keyframes loading-pulse {
+    0%, 80%, 100% {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 }
