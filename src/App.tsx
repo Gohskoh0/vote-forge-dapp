@@ -7,8 +7,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LoadingScreen } from "@/components/loading-screen";
 import { FooterNavigation } from "@/components/footer-navigation";
 import { WalletConnection } from "@/components/wallet-connection";
+import { ThemeProvider } from "@/components/theme-provider";
 import Dashboard from "./pages/Dashboard";
 import Proposals from "./pages/Proposals";
+import CreateProposal from "./pages/CreateProposal";
+import Members from "./pages/Members";
+import Treasury from "./pages/Treasury";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,10 +36,16 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
           <div className="min-h-screen flex flex-col">
             {/* Top Header */}
             <header className="h-14 border-b border-border dao-card flex items-center justify-between px-4 sticky top-0 z-30">
@@ -58,10 +69,10 @@ const App = () => {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/proposals" element={<Proposals />} />
                 <Route path="/proposals/:id" element={<div className="p-8 text-center">Proposal Detail - Coming Soon</div>} />
-                <Route path="/create" element={<div className="p-8 text-center">Create Proposal - Coming Soon</div>} />
-                <Route path="/members" element={<div className="p-8 text-center">Members - Coming Soon</div>} />
-                <Route path="/treasury" element={<div className="p-8 text-center">Treasury - Coming Soon</div>} />
-                <Route path="/settings" element={<div className="p-8 text-center">Settings - Coming Soon</div>} />
+                <Route path="/create" element={<CreateProposal />} />
+                <Route path="/members" element={<Members />} />
+                <Route path="/treasury" element={<Treasury />} />
+                <Route path="/settings" element={<Settings />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
@@ -70,7 +81,8 @@ const App = () => {
             <FooterNavigation />
           </div>
         </BrowserRouter>
-      </TooltipProvider>
+        </TooltipProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 };
