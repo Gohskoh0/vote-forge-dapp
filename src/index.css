@@ -5,15 +5,15 @@
 /* VoteForge DAO Design System - Natural, Professional Interface */
 @layer base {
   :root {
-    /* Natural Color Palette - Inspired by real fintech apps */
-    --background: 251 251 253;
-    --foreground: 15 23 42;
+    /* Professional Clean Palette - Clean white backgrounds */
+    --background: 255 255 255;
+    --foreground: 30 30 30;
 
     --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card-foreground: 30 30 30;
 
     --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover-foreground: 30 30 30;
 
     /* Professional Blue - Trust & Stability */
     --primary: 59 130 246;
@@ -25,7 +25,7 @@
     --secondary-foreground: 255 255 255;
 
     --muted: 248 250 252;
-    --muted-foreground: 100 116 139;
+    --muted-foreground: 71 85 105;
 
     /* Success Green - Natural & Trustworthy */
     --accent: 34 197 94;
@@ -45,10 +45,10 @@
     --warning: 245 158 11;
     --warning-foreground: 255 255 255;
 
-    /* Subtle Natural Gradients */
+    /* Subtle Professional Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(59 130 246) 0%, hsl(99 102 241) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(255 255 255 / 0.8) 0%, hsl(248 250 252 / 0.6) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(59 130 246 / 0.05) 0%, hsl(99 102 241 / 0.05) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(255 255 255 / 0.95) 0%, hsl(248 250 252 / 0.8) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(255 255 255) 0%, hsl(248 250 252) 100%);
     
     /* Professional Shadows */
     --shadow-natural: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -106,8 +106,7 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image: var(--gradient-hero);
-    background-attachment: fixed;
+    background: hsl(var(--background));
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
